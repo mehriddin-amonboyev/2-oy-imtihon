@@ -58,7 +58,7 @@ CREATE TABLE contracts(
 );
 
 
-INSERT INTO contracts(id, contract_type, total_price,  customer_id)   
+INSERT INTO contracts(id, contract_type, total_price, customer_id)   
     VALUES
     (1, 5, 1),
     (2, 10, 2),
@@ -68,9 +68,9 @@ INSERT INTO contracts(id, contract_type, total_price,  customer_id)
 
 CREATE TABLE contracts_item(
     id SERIAL PRIMARY KEY,
+    product_id SMALLINT,
     count SMALLINT,
     price DECIMAL(10,2),
-    product_id SMALLINT,
     contract_id SMALLINT,
 
     FOREIGN KEY(contract_id) 

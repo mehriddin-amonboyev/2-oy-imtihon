@@ -8,4 +8,4 @@ router
     .use(category)
     .use(product)
     .use(customer)
-    .use(blacklist);  
+    .use(blacklist);

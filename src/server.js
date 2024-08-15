@@ -12,9 +12,9 @@ app.use(morgan('tiny'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+
 app.use("/api/v1", router);
 
-// app.get("/blacklisted", )
 
 
 app.listen(appConfig.port, appConfig.host, () => {

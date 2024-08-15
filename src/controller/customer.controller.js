@@ -31,7 +31,7 @@ export async function updateCustomer(req, res) {
     const data = req.body;
     const { id } = req.params;
 
-    const response = await fetchData(
+    await fetchData(
         `UPDATE customer SET full_name = $1, email = $2, password = $3, phone = $4 WHERE id = ${id};`,
         data.full_name,
         data.email,
